@@ -8,16 +8,29 @@
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 :root{
-  --yellow:#FFE600;--yellow-dark:#E6CF00;--yellow-light:#FFFBE6;
-  --blue:#3483FA;--blue-dark:#2968C8;--blue-deeper:#1A4F9E;
-  --blue-light:#EBF3FF;--blue-mid:#D4E8FF;
-  --dark:#1A1A2E;--text:#333;--gray:#717171;
-  --gray-light:#F5F5F5;--border:#EBEBEB;--white:#fff;
-  --green:#00A650;--green-light:#E8F8EF;
-  --orange:#FF7733;--orange-light:#FFF0E8;
-  --purple:#9B59B6;--purple-light:#F5EEF8;
+  --yellow:#FFF8DC;
+  --yellow-mid:#F5E97A;
+  --yellow-dark:#E8D98A;
+  --yellow-light:#FFFDF0;
+  --blue:#2C3E6B;
+  --blue-dark:#1E2D52;
+  --blue-deeper:#15203D;
+  --blue-light:#EEF2FF;
+  --blue-mid:#C5CFEA;
+  --dark:#1A1A2E;
+  --text:#333;
+  --gray:#717171;
+  --gray-light:#F5F5F5;
+  --border:#EBEBEB;
+  --white:#fff;
+  --green:#2E7D5E;
+  --green-light:#E8F5EE;
+  --orange:#C4631A;
+  --orange-light:#FDF0E6;
+  --purple:#5B3AA8;
+  --purple-light:#EEE8FA;
 }
-body{font-family:'Inter',sans-serif;background:#F2F2F2;color:var(--text);min-height:100vh}
+body{font-family:'Inter',sans-serif;background:#EDEAE3;color:var(--text);min-height:100vh}
 header{background:var(--yellow);height:60px;padding:0 2rem;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:100;border-bottom:2px solid var(--yellow-dark)}
 .logo{display:flex;align-items:center;gap:10px;text-decoration:none}
 .logo-mark{width:36px;height:36px;background:var(--blue);border-radius:8px;display:flex;align-items:center;justify-content:center}
@@ -27,9 +40,9 @@ header{background:var(--yellow);height:60px;padding:0 2rem;display:flex;align-it
 .header-right{display:flex;align-items:center;gap:8px}
 .btn-back,.lang-link{font-size:12px;font-weight:600;color:var(--blue-deeper);text-decoration:none;background:rgba(255,255,255,0.7);padding:4px 12px;border-radius:20px;border:1px solid var(--yellow-dark);transition:background .15s}
 .btn-back:hover,.lang-link:hover{background:white}
-.badge{background:var(--blue);color:var(--yellow);font-family:'Raleway',sans-serif;font-size:11px;font-weight:700;padding:4px 12px;border-radius:20px}
+.badge{background:var(--blue);color:var(--yellow-mid);font-family:'Raleway',sans-serif;font-size:11px;font-weight:700;padding:4px 12px;border-radius:20px}
 .hero{background:var(--yellow);padding:2.5rem 2rem 2rem;text-align:center;border-bottom:2px solid var(--yellow-dark)}
-.hero-tag{display:inline-block;background:var(--blue);color:var(--yellow);font-size:11px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;padding:4px 14px;border-radius:20px;margin-bottom:14px}
+.hero-tag{display:inline-block;background:var(--blue);color:var(--yellow-mid);font-size:11px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;padding:4px 14px;border-radius:20px;margin-bottom:14px}
 .hero-title-wrap{display:flex;align-items:center;justify-content:center;gap:12px;margin-bottom:8px;flex-wrap:wrap}
 .hero-ml-icon{width:46px;height:46px;background:var(--blue);border-radius:10px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
 .hero-ml-icon svg{width:26px;height:26px}
@@ -55,18 +68,18 @@ label{display:block;font-size:12px;font-weight:500;color:var(--text);margin-bott
 label .hint{font-weight:400;color:var(--gray)}
 .field-note{font-size:11px;color:var(--gray);margin-top:4px;background:var(--gray-light);border-radius:6px;padding:5px 8px;border-left:3px solid var(--blue-mid);line-height:1.4}
 input[type="number"]{width:100%;height:38px;border:1.5px solid var(--border);border-radius:8px;padding:0 10px;font-size:14px;font-family:'Inter',sans-serif;color:var(--text);background:var(--white);outline:none;transition:border-color .15s}
-input[type="number"]:focus{border-color:var(--blue);box-shadow:0 0 0 3px rgba(52,131,250,.1)}
+input[type="number"]:focus{border-color:var(--blue);box-shadow:0 0 0 3px rgba(44,62,107,.1)}
 .results-sticky{position:sticky;top:76px}
 .result-header{background:var(--blue);padding:1.25rem 1.5rem;border-radius:12px 12px 0 0}
-.result-header .r-label{font-size:11px;font-weight:600;letter-spacing:1px;text-transform:uppercase;color:rgba(255,255,255,.65);margin-bottom:4px}
-.result-header .r-title{font-family:'Raleway',sans-serif;font-size:15px;font-weight:700;color:var(--yellow)}
+.result-header .r-label{font-size:11px;font-weight:600;letter-spacing:1px;text-transform:uppercase;color:rgba(255,255,255,.6);margin-bottom:4px}
+.result-header .r-title{font-family:'Raleway',sans-serif;font-size:15px;font-weight:700;color:var(--yellow-mid)}
 .res-kpis{display:grid;grid-template-columns:1fr 1fr;gap:8px;padding:.9rem 1.25rem;border-bottom:1px solid var(--border)}
 .kpi{background:var(--gray-light);border-radius:8px;padding:9px 10px;text-align:center}
 .kpi.hl{background:var(--blue)}
 .kpi-val{font-family:'Raleway',sans-serif;font-size:22px;font-weight:800;color:var(--blue);line-height:1}
-.kpi.hl .kpi-val{color:var(--yellow)}
+.kpi.hl .kpi-val{color:var(--yellow-mid)}
 .kpi-lbl{font-size:9px;color:var(--gray);margin-top:2px;text-transform:uppercase;letter-spacing:.5px}
-.kpi.hl .kpi-lbl{color:rgba(255,255,255,.65)}
+.kpi.hl .kpi-lbl{color:rgba(255,255,255,.6)}
 .res-table-wrap{padding:.75rem 1.25rem;overflow-x:auto}
 .res-table{width:100%;border-collapse:collapse;font-size:11px}
 .res-table th{font-size:9px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--gray);padding:5px 6px;border-bottom:2px solid var(--border);text-align:right;white-space:nowrap}
@@ -101,7 +114,7 @@ input[type="number"]:focus{border-color:var(--blue);box-shadow:0 0 0 3px rgba(52
 <header>
   <a class="logo" href="#">
     <div class="logo-mark">
-      <svg viewBox="0 0 20 20" fill="none"><circle cx="10" cy="6.5" r="3.5" fill="#FFE600"/><path d="M2.5 17.5c0-4.142 3.358-7.5 7.5-7.5s7.5 3.358 7.5 7.5" stroke="#FFE600" stroke-width="2.2" stroke-linecap="round"/></svg>
+      <svg viewBox="0 0 20 20" fill="none"><circle cx="10" cy="6.5" r="3.5" fill="#F5E97A"/><path d="M2.5 17.5c0-4.142 3.358-7.5 7.5-7.5s7.5 3.358 7.5 7.5" stroke="#F5E97A" stroke-width="2.2" stroke-linecap="round"/></svg>
     </div>
     <div><div class="logo-name">Mercado Libre</div><div class="logo-sub">Herramientas Internas</div></div>
   </a>
@@ -116,7 +129,7 @@ input[type="number"]:focus{border-color:var(--blue);box-shadow:0 0 0 3px rgba(52
   <div class="hero-tag">Productividad Operacional · MeliAir</div>
   <div class="hero-title-wrap">
     <div class="hero-ml-icon">
-      <svg viewBox="0 0 26 26" fill="none"><path d="M4 20 L13 6 L22 20" stroke="#FFE600" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/><circle cx="13" cy="6" r="2" fill="#FFE600"/></svg>
+      <svg viewBox="0 0 26 26" fill="none"><path d="M4 20 L13 6 L22 20" stroke="#F5E97A" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/><circle cx="13" cy="6" r="2" fill="#F5E97A"/></svg>
     </div>
     <h1>Calculadora de Productividad MeliAir — Backhaul</h1>
   </div>
@@ -273,39 +286,30 @@ input[type="number"]:focus{border-color:var(--blue);box-shadow:0 0 0 3px rgba(52
 </div><!-- fin container -->
 
 <script>
-// ── MTM CONSTANTES (seg/m) ──────────────────────────────────────────
-var SFISF = 0.468;  // forklift, estable, interno
-var SFILF = 0.612;  // forklift, inestable/cargado, interno
-var HFFB  = 1.260;  // paletera >500kg, avance
-var HFFL  = 0.900;  // paletera vacía, avance
-var EFIM  = 0.468;  // rebocador con remolque, interno
+var SFISF = 0.468;
+var SFILF = 0.612;
+var HFFB  = 1.260;
+var HFFL  = 0.900;
+var EFIM  = 0.468;
 
-// ── CONSTANTES FIJOS PRE-CALCULADOS DEL MTM ─────────────────────────
-// Descarga carrito
-var CAP_CARR_ARR  = 3600/3367.12;   // 1.069 carrito/h
-var CAP_CARR_ABA  = 3600/2426.46;   // 1.484 carrito/h
-// Rep sobre/bajo lámina (lám/h fijos)
+var CAP_CARR_ARR  = 3600/3367.12;
+var CAP_CARR_ABA  = 3600/2426.46;
 var CAP_REP_SG    = 4.1;
 var CAP_REP_BG    = 5.3;
 var CAP_REP_SM    = 7.02;
 var CAP_REP_BM    = 7.92;
-// Apilar mangas: total = FIXED + D1×3×(SFISF+SFILF)
 var FIXED_APILAR  = 211.70;
-var RATE_APILAR   = 3*(SFISF+SFILF);  // 3.24 seg/m
-// Llevar pila a buffer: total = FIXED + D2×(SFISF+SFILF)
+var RATE_APILAR   = 3*(SFISF+SFILF);
 var FIXED_BUF     = 49.28;
-var RATE_BUF      = SFISF+SFILF;      // 1.08 seg/m
-// Descarga AE (manga air/pallet): total = FIXED + D_ae×(SFISF+SFILF)  ref 20m
+var RATE_BUF      = SFISF+SFILF;
 var FIXED_DAE     = 38.15;
-var RATE_DAE      = SFISF+SFILF;      // 1.08 seg/m
-// Carga camión AE: total = FIXED + D_carga×0.624   ref 50m
+var RATE_DAE      = SFISF+SFILF;
 var FIXED_CARGA   = 1821.42;
-var RATE_CARGA    = 0.33*1.75*(SFILF+SFISF);  // 0.624 seg/m
-var REF_CARGA_LAM = 1.943;   // lám/h @ 50m
-var REF_CARGA_PH  = 6996;    // pcts/h @ 50m, 3000 pcts/camion
-// Acomodar mangas camión (FIJO)
-var CAP_ACOMO     = 1.98;    // lám/h
-var REF_ACOMO_PH  = 9958;   // pcts/h @ 3000 pcts/camion
+var RATE_CARGA    = 0.33*1.75*(SFILF+SFISF);
+var REF_CARGA_LAM = 1.943;
+var REF_CARGA_PH  = 6996;
+var CAP_ACOMO     = 1.98;
+var REF_ACOMO_PH  = 9958;
 
 function n(id){ return parseFloat(document.getElementById(id).value)||0; }
 function fmt(v){ if(!v||isNaN(v)||v<=0) return '—'; return Math.round(v).toLocaleString('es-AR'); }
@@ -324,43 +328,27 @@ function calcular(){
 
   if(!ppcam||!sppMA||!sppMP||!sppC) return;
 
-  // ── Cálculos ─────────────────────────────────────────────────────
-  // Descarga carrito
   var phCarrArr  = CAP_CARR_ARR * sppC;
   var phCarrAba  = CAP_CARR_ABA * sppC;
-
-  // Rep sobre/bajo lámina
   var phRepSG = CAP_REP_SG * sppG;
   var phRepBG = CAP_REP_BG * sppG;
   var phRepSM = CAP_REP_SM * sppM;
   var phRepBM = CAP_REP_BM * sppM;
-
-  // Apilar mangas (variable D1)
   var lamApilar   = 3600/(FIXED_APILAR + D1*RATE_APILAR);
   var phApilar    = lamApilar * sppMP * 3;
-
-  // Llevar pila a buffer (variable D2)
   var lamBuffer   = 3600/(FIXED_BUF + D2*RATE_BUF);
   var phBuffer    = lamBuffer * sppMA * 3;
-
-  // Descarga AE (variable D3 — usa D3 como distancia operacional)
   var lamDAE      = 3600/(FIXED_DAE + D3*RATE_DAE);
   var phDAE       = lamDAE * sppMP * 3;
-
-  // Acomodar mangas camión (FIJO, escala con pcts/camion)
   var phAcomo     = REF_ACOMO_PH * (ppcam/3000);
-
-  // Carga camión AE (variable D3)
   var lamCarga    = 3600/(FIXED_CARGA + D3*RATE_CARGA);
   var phCarga     = (lamCarga/REF_CARGA_LAM) * REF_CARGA_PH * (ppcam/3000);
 
-  // ── KPIs ─────────────────────────────────────────────────────────
   document.getElementById('kpiCarrito').textContent = fmt1(CAP_CARR_ARR);
   document.getElementById('kpiCargaCam').textContent = fmt1(lamCarga);
   document.getElementById('kpiApilar').textContent = fmt1(lamApilar);
   document.getElementById('kpiBuffer').textContent = fmt1(lamBuffer);
 
-  // ── Tabla ────────────────────────────────────────────────────────
   var grupos = [
     {
       grp: '✈️  Descarga de Carrito',
